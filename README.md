@@ -21,7 +21,7 @@ https://github.com/luxpmsoft/coding_test_luxpm
 9. Please follow the code structure within the framework I have shared with you.
 10. Create an API that returns all of the saved data from the Database. Describe in ReadMe regarding how to call this API.
   
-Once you have completed the coding test, please submit the test Github repository of your own to brian.yu@luxpmsoft.com 
+Once you have completed the coding test, please submit the test Github repository of your own to Gaurav.sharma@luxpmsoft.com and vickneswary.rathar@luxpmsoft.com. 
 
 We provide a competitive salary to our employee. We are a South Korea based Full Stack & AI agency.
 Please reply to this email by answering the following questions.
