@@ -10,8 +10,8 @@ const Production = {
 
 module.exports = {
     ...(process.env.ENV === "prod" ? Production : Development),
-    HOST: "",
-    DB: "",
+    HOST: "127.0.0.1",
+    DB: "patterson",
     dialect: "mysql",
     pool: {
       max: 5,
