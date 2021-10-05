@@ -1,42 +1,66 @@
-Hello, 
+# LuxPM backend example
 
-My name is Young. I am a software director at Lux PM. I am sending you this email because you have been selected for the first stage of our interview process for the position of software engineer. 
+This project creates a python script that generates the first 20 odd numbers from 0. Then this script inserts the last n digits of the odd numbers you have created in the reverse order in between each letter.
 
-For the coding test, please refer to the following link to see a basic node.js and mysql framework utilizing sequelize. Please return your result by sending us a link for your own github repo.
+Then, a REST api is created which calls the python script and allows you to POST a new string to be processed by the python script and then saved into a database by saving the letters and numbers separately one by one in order.
 
-There will be 3 rounds for the interviewing process - Coding Test 1, Zoom Interview (Tech Lead), Zoom Interview (Executive Board)
+Finally, another GET call is created to get all the info from the database of processed strings.
 
+---
 
+## Installation Guide
 
-<<Requirements>>
+Before running the application first setup HOST and DB inside of config/mysql.js
 
-1. Create a python script that generates the first 20 even numbers from 0.
-2. Within your first and last names, insert the last 8 digits of the odd numbers you have created in the reverse order in between each letter.
-i.e. L39u37x35P33M31s29o27f25t
-3. Create a node script that calls the python script - Please use the attached framework in the following link
-https://github.com/luxpmsoft/coding_test_luxpm
-4. The Python script should return the result as a Json packet
-5. Save the result into the database - Save each of the letters and numbers separately one by one in order.
-7. The mysql database should be named after your last name
-8. Ensure that one can call this node script through Postman and provide us with a API definition.
-9. Please follow the code structure within the framework I have shared with you.
-10. Create an API that returns all of the saved data from the Database. Describe in ReadMe regarding how to call this API.
-  
-Once you have completed the coding test, please submit the test Github repository of your own to Gaurav.sharma@luxpmsoft.com. 
+Then type the following in your termainal where you downloaded the code
 
-We provide a competitive salary to our employee. We are a South Korea based Full Stack & AI agency.
-Please reply to this email by answering the following questions.
-1. What is your desired salary?
-2. What is your ideal starting date?
-3. If you live more than 70 minutes away from the company’s location, are you willing to be relocated to somewhere closer to the company?
-4. If you live outside of the company, do you need sponsorship for visa?
-5. What is the level of your proficiency in English?
+```
+  npm install
 
-*Note: this position is not a remote position
+  npm start
+```
 
-If you have any questions, please feel free to reach out to me by email.
-Thank you for your interest again. I look forward to hearing from you.
+Example:
 
-Best regards.
+![Terminal Example](./resources/terminal.gif)
 
-Young Yu
+---
+
+## Examples
+
+In order to add a new string to be processed by the python script and added to the database do a POST to the folowing /username endpoint and pass a {username: NathanEdwardPatterson} key, value in the body.
+
+Example with postman:
+
+![GET Example](./Resources/postUsernameExample.gif)
+
+In order to get all information from the database do a GET to the folowing /usernames endpoint.
+
+Example with postman:
+
+![PUT Example](./Resources/getUsernamesExample.gif)
+
+---
+
+## Contributors 
+
+Nathan Patterson
+
+Email: nathan.e.patterson@gmail.com
+
+[LinkedIn](https://www.linkedin.com/in/natepatterson/)
+
+[Personal Site](https://www.n8patterson.com)
+
+---
+
+## License
+
+MIT License
+Copyright (c) [2021] [Nathan Patterson]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
